@@ -1,0 +1,237 @@
+# view AndroidManifest.xml #generated:225
+-keep class cn.aduu.android.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:442
+-keep class cn.appmedia.ad.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:240
+-keep class cn.domob.android.ads.DmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:454
+-keep class cn.immob.sdk.BrowserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:449
+-keep class cn.immob.sdk.net.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:451
+-keep class cn.immob.sdk.service.GetLocationService { <init>(...); }
+
+# view AndroidManifest.xml #generated:446
+-keep class cn.immob.sdk.util.LMActionHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:144
+-keep class cn.pro.sdk.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:398
+-keep class com.adchina.android.ads.views.AdBrowserView { <init>(...); }
+
+# view AndroidManifest.xml #generated:403
+-keep class com.adchina.android.ads.views.AdCompleteReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:381
+-keep class com.adroi.sdk.AppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:124
+-keep class com.ads.sdk.video.VideoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:364
+-keep class com.adusing.adsmar.request.AdBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:368
+-keep class com.adusing.adsmar.update.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:194
+-keep class com.adwalker.wall.platform.layout.AdDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.adwalker.wall.platform.layout.AdShowActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:197
+-keep class com.adwalker.wall.platform.layout.AdShowWebActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:498
+-keep class com.amazon.device.ads.MraidBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:501
+-keep class com.amazon.device.ads.VideoActionHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:431
+-keep class com.baidu.mobads.AppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:416
+-keep class com.chamspire.mobile.ad.base.platforms.self.SelfFullActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:337
+-keep class com.chance.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:342
+-keep class com.chance.engine.AdService { <init>(...); }
+
+# view AndroidManifest.xml #generated:557
+-keep class com.chartboost.sdk.CBImpressionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.donson.momark.activity.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:375
+-keep class com.easou.ecom.mads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:371
+-keep class com.easou.ecom.mads.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:421
+-keep class com.google.android.gms.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:532
+-keep class com.guohead.mix.MIXViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:170
+-keep class com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:164
+-keep class com.inmobi.rendering.InMobiAdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:179
+-keep class com.inmobi.signals.activityrecognition.ActivityRecognitionManager { <init>(...); }
+
+# view AndroidManifest.xml #generated:159
+-keep class com.jd.jdadsdk.JDAdBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:504
+-keep class com.kuaiyou.AdViewInstlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.kuaiyou.video.AdviewWebView { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.kuaiyou.video.vast.activity.VASTAdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:99
+-keep class com.kyview.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.kyview.AdviewWebView { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.kyview.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.kyview.demo.AdBannerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.kyview.demo.AdInstlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.kyview.demo.AdNativeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class com.kyview.demo.AdVideoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.kyview.demo.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.kyview.demo.SpreadScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:517
+-keep class com.kyview.screen.interstitial.adapters.AdInstlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:456
+-keep class com.kyview.screen.interstitial.adapters.LmMobActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:293
+-keep class com.kyview.screen.interstitial.adapters.WqActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.mediav.ads.sdk.service.MvService { <init>(...); }
+
+# view AndroidManifest.xml #generated:460
+-keep class com.millennialmedia.android.MMActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:141
+-keep class com.mobfox.sdk.interstitialads.InterstitialActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:410
+-keep class com.mobisage.android.MobiSageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:387
+-keep class com.mopanspot.sdk.MopanSpotActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:391
+-keep class com.mopanspot.sdk.pluginmgr.MoPanLanchMonitorService { <init>(...); }
+
+# view AndroidManifest.xml #generated:436
+-keep class com.mt.airad.MultiAD { <init>(...); }
+
+# view AndroidManifest.xml #generated:299
+-keep class com.otomod.ad.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.oupeng.ad.sdk.browser.OupengBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.oupeng.ad.sdk.interstitial.adapter.html.OupengHtmlInterstitialActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.oupeng.ad.sdk.interstitial.adapter.image.OupengImageInterstitialActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.oupeng.ad.sdk.splash.adapter.OupengImageSplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class com.oupeng.ad.sdk.video.OupengPlayerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:520
+-keep class com.qiang.escore.sdk.view.DetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:523
+-keep class com.qiang.escore.sdk.view.WebActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:357
+-keep class com.qq.e.ads.ADActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:352
+-keep class com.qq.e.comm.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:133
+-keep class com.suntengmob.sdk.activity.BrowserAdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.suntengmob.sdk.activity.InterstitialActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:136
+-keep class com.suntengmob.sdk.activity.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:540
+-keep class com.tapjoy.TJAdUnitActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:548
+-keep class com.tapjoy.TJContentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:545
+-keep class com.tapjoy.mraid.view.ActionHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:551
+-keep class com.tapjoy.mraid.view.Browser { <init>(...); }
+
+# view AndroidManifest.xml #generated:467
+-keep class com.umengAd.android.UmengAdDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:473
+-keep class com.vpadn.widget.VpadnActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:285
+-keep class com.wqmobile.sdk.WQActionHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:288
+-keep class com.wqmobile.sdk.WQBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:255
+-keep class sd.we.ad.IOY { <init>(...); }
+
+# view AndroidManifest.xml #generated:261
+-keep class sd.we.ad.TYS { <init>(...); }
+
+# view AndroidManifest.xml #generated:246
+-keep class sd.we.ad.normal.video.VideoActivity { <init>(...); }
+

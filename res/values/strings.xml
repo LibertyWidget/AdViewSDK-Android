@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello,This is AdViewSample!</string>
+    <string name="app_name">AdView Demo</string>
+    <string name="codelayout">广告位1</string>
+    <string name="codelayout2">广告位2</string>
+    <string name="customlayout">自定义广告平台</string>
+    <string name="bannerlayout">横幅广告</string>
+    <string name="instllayout">全/插屏广告</string>
+    <string name="nativelayout">原生广告</string>
+    <string name="videolayout">视频广告</string>
+    <string name="version">—————— v3.4.1 ——————</string>
+    <string name="content">更新日志</string>
+    <string name="ok">确定</string>
+    <string name="btn_native">加入原生广告</string>
+    <string name="btn_name">请求插屏广告</string>
+    <string name="btn_help">当前版本号：V3.4.1</string>
+    <string name="btn_showinstal">展示广告位1</string>
+    <string name="btn_requesshow">展示广告位2</string>
+    <string name="btn_customshow">展示自定义样式广告位1</string>
+    <string name="btn_requestnatie">请求原生广告</string>
+    <string name="btn_shownative">展示原生广告</string>
+    <string name="btn_requestvideo">请求视频广告</string>
+    <string name="btn_showvideo">展示视频广告</string>
+    <string name="release">更新时间：2017-01-09\n
+		1.添加欧朋的横幅，插屏，开屏\n
+		2.添加舜飞的横幅，插屏，开屏，原生，视频\n
+		3.更新Vpon至4.6.1\n
+		4.更新有米7.0.1</string>
+
+</resources>
