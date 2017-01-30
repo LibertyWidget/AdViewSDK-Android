@@ -1,78 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="fill_parent">
 
-    <LinearLayout
-        android:id="@+id/adLayoutCustom"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/wrap_content"
-        android:gravity="center_vertical|top"
-        android:orientation="vertical" >
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <Button
+        android:id="@+id/btnCode"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical" >
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/codelayout"
+        android:textColor="@color/font"></Button>
 
-        <Button
-            android:id="@+id/btnCode"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@color/blue"
-            android:gravity="center"
-            android:text="@string/codelayout"
-            android:textColor="@color/font" >
-        </Button>
 
-        <Button
-            android:id="@+id/btnCode2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@color/green"
-            android:gravity="center"
-            android:text="@string/codelayout2"
-            android:textColor="@color/font" >
-        </Button>
+    <FrameLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"></FrameLayout>
 
-        <Button
-            android:id="@+id/btnCustom"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@color/yellow"
-            android:gravity="center"
-            android:text="@string/customlayout"
-            android:textColor="@color/font" >
-        </Button>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|bottom"
-        android:orientation="vertical" >
-
-        <LinearLayout
-            android:id="@+id/adLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -17,10 +17,13 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <!-- Adsmar移动必须 -->
+    <!-- Adsmar -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
 
     <!-- 磨盘必须 -->
+    <!-- Disc must be -->
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <!-- 安沃、InMobi、力美、帷千与多盟所需的权限 -->
@@ -98,6 +101,50 @@
         <activity android:name="com.kyview.AdviewWebView" />
         <activity android:name="com.kyview.AdActivity" />
 
+
+
+
+        <!-- AdView SDK for Inmobi (需要api 13 方可编译通过) -->
+        <activity
+            android:name="com.inmobi.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.inmobi.share.id" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
+            android:enabled="true" />
+
+
+
+
+        <!-- AdView SDK for AdMob -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="8487000" />
+
+
+
+        <!-- AdView SDK for MobFox-->
+        <activity android:name="com.mobfox.sdk.interstitialads.InterstitialActivity"></activity>
+
+
+
+
         <!-- AdView SDK for Oupeng-->
         <activity
             android:name="com.oupeng.ad.sdk.video.OupengPlayerActivity"
@@ -137,8 +184,7 @@
                   android:screenOrientation="portrait"
                   android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|smallestScreenSize" />
         
-        <!-- AdView SDK for MobFox-->
-        <activity android:name="com.mobfox.sdk.interstitialads.InterstitialActivity"></activity>
+
         
         <!-- AdView SDK for AdPro 光音 -->
         <activity
@@ -160,25 +206,6 @@
             android:name="com.jd.jdadsdk.JDAdBrowser"
             android:screenOrientation="portrait" />
 
-        <!-- AdView SDK for Inmobi (需要api 13 方可编译通过) -->
-        <activity
-            android:name="com.inmobi.rendering.InMobiAdActivity"
-            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <receiver
-            android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.inmobi.share.id" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
-            android:enabled="true" />
 
         <!-- Adview SDK for 360聚效 MVAd -->
         <service
@@ -215,7 +242,10 @@
 
         <provider
             android:name="com.adzhidian.ui.play.LocalHtmlProvider"
-			android:authorities="com.kyview.screen.interstitial.adapters.localhtmlprovider" />
+			android:authorities="com.kyview.screen.interstitial.adapters.localhtmlprovider" />
+
+
+
 
         -->
         <!-- Adview SDK for aduu -->
@@ -323,7 +353,10 @@
             <intent-filter>
                 <action android:name="com.o2omobi.ad.alarm" />
             </intent-filter>
-        </receiver>
+        </receiver>
+
+
+
 
         -->
         <!-- AdView SDK for Chance(触控) -->
@@ -411,15 +444,7 @@
             android:name="com.chamspire.mobile.ad.base.platforms.self.SelfFullActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
         
-        <!-- AdView SDK for AdMob -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="8487000" />
 
         <!-- AdView SDK for Baidu -->
         <activity
@@ -480,7 +505,10 @@
 			<intent-filter>
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
-		</activity>
+		</activity>
+
+
+
 
         -->
 
@@ -551,7 +579,7 @@
             android:excludeFromRecents="true"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        
+
         <!--
         supported markets are as follows:
 		EOE(优亿市场)
@@ -573,7 +601,10 @@
 		COOLAPK(酷安网)
 		ANFONE(安丰)
 		APKOK(乐致网) 
-		360MARKET(360市场)
+		360MARKET(360市场)
+
+
+
 
         -->
     </application>

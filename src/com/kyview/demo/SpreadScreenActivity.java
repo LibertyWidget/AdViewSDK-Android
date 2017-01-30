@@ -23,7 +23,7 @@ import com.kyview.manager.AdViewVideoManager;
 
 /**
  * 
- * Èç¹ûÏëÊ¹ÓÃ¿ªÆÁ£¬ÇëÁªÏµAdView¿Í·þ
+ *Open Screen Advertisement
  * 
  */
 public class SpreadScreenActivity extends Activity implements
@@ -34,37 +34,35 @@ public class SpreadScreenActivity extends Activity implements
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.spread_layout);
-		//»ñÈ¡ºóÌ¨ÅäÖÃ
-		initConfiguration = new InitConfiguration.Builder(
-				this).setUpdateMode(UpdateMode.EVERYTIME)
-				.setBannerCloseble(BannerSwitcher.CANCLOSED)
-				.setRunMode(RunMode.TEST)
-				.build();
-		//ºá·ù ÅäÖÃ
-		AdViewBannerManager.getInstance(this).init(initConfiguration,
-				MainActivity.keySet);
-		//²åÆÁ ÅäÖÃ
-		AdViewInstlManager.getInstance(this).init(initConfiguration,
-				MainActivity.keySet);
-		//Ô­Éú ÅäÖÃ
-		AdViewNativeManager.getInstance(this).init(initConfiguration,
-				MainActivity.keySet);
-		//¿ªÆÁ ÅäÖÃ
-		AdViewSpreadManager.getInstance(this).init(initConfiguration,
-				MainActivity.keySet);
-		AdViewVideoManager.getInstance(this).init(initConfiguration,
-				MainActivity.keySet);
 
-		// ÉèÖÃ¿ªÆÁÏÂ·½LOGO£¬±ØÐëµ÷ÓÃ¸Ã·½·¨
+		//Basic Initialization
+		InitConfiguration initConfiguration = new InitConfiguration.Builder(
+				this).setUpdateMode(InitConfiguration.UpdateMode.EVERYTIME)
+				.setBannerCloseble(InitConfiguration.BannerSwitcher.CANCLOSED)
+				.setInstlControlMode(InitConfiguration.InstlControlMode.USERCONTROL)
+				.setSupportHtml(InitConfiguration.Html5Switcher.SUPPORT)
+				.setRunMode(InitConfiguration.RunMode.TEST)
+				.build();
+
+
+		//Intialization for Open Screen ad
+		AdViewSpreadManager.getInstance(this).init(initConfiguration, new String[]{SDK_KEY});
+
+
+		// setting logo for open screen ad
 		AdViewSpreadManager.getInstance(this).setSpreadLogo(R.drawable.spread_logo);
-		// ÉèÖÃ¿ªÆÁ±³¾°ÑÕÉ«£¬¿É²»ÉèÖÃ
+
+		// setting background color for open screen ad
 		AdViewSpreadManager.getInstance(this).setSpreadBackgroudColor(
 				Color.WHITE);
-		// ÉèÖÃ¿ªÆÁµ¹¼ÆÊ±Í¨Öª·½Ê½
+
+		//how much time you want show open screen ad
 		AdViewSpreadManager.getInstance(this).setSpreadNotifyType(AdViewSpreadManager.NOTIFY_COUNTER_NUM);
-		// ÇëÇó¿ªÆÁ¹ã¸æ
-		AdViewSpreadManager.getInstance(this).request(this, MainActivity.key1,
+
+		// Requesting open screen ad
+		AdViewSpreadManager.getInstance(this).request(this, MainActivity.SDK_KEY,
 				(RelativeLayout) findViewById(R.id.spreadlayout), this);
+
 	}
 
 	@Override
@@ -77,13 +75,14 @@ public class SpreadScreenActivity extends Activity implements
 	@Override
 	protected void onRestart() {
 		super.onRestart();
-		// waitingOnRestart ÐèÒª×Ô¼º¿ØÖÆ
+		// waitingOnRestart ï¿½ï¿½Òªï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		waitingOnRestart = true;
 		jumpWhenCanClick();
 	}
 
 	public boolean waitingOnRestart = false;
 
+	//this function used for going to previous activity
 	private void jump() {
 		Intent intent = new Intent();
 		intent.setClass(this, MainActivity.class);
@@ -93,9 +92,7 @@ public class SpreadScreenActivity extends Activity implements
 		this.finish();
 	}
 
-	/*
-	 * °üº¬µã»÷µÄ¿ªÆÁ¹ã¸æÊ±»áµ÷ÓÃ¸Ã·½·¨¹ã¸æ
-	 */
+
 	private void jumpWhenCanClick() {
 		if (this.hasWindowFocus() || waitingOnRestart) {
 			this.startActivity(new Intent(this, MainActivity.class));
@@ -108,7 +105,7 @@ public class SpreadScreenActivity extends Activity implements
 	}
 
 	// /**
-	// * ÓÃ»§µã»÷Ìø¹ýÊÂµ÷ÓÃ
+	// * CallBack Method for SpreadScreen/OpenScreen Ad
 	// */
 
 	@Override
@@ -132,15 +129,15 @@ public class SpreadScreenActivity extends Activity implements
 	}
 
 	/**
-	 * ÓÃ»§±ØÐëÉèÖÃ adSpreadManager.setSpreadNotifyType(this,
-	 * AdSpreadManager.NOTIFY_CUSTOM); ·½¿É»Øµ÷¸Ã·½·¨£¬·ñÔò²»µ÷ÓÃ
+	 * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ adSpreadManager.setSpreadNotifyType(this,
+	 * AdSpreadManager.NOTIFY_CUSTOM); ï¿½ï¿½ï¿½É»Øµï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò²»µï¿½ï¿½ï¿½
 	 * 
 	 * @param view
-	 *            ·µ»Ø¶¥²¿×Ô¶¨Òå²¼¾Ö£¨RelativeLayout£©
+	 *            ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½å²¼ï¿½Ö£ï¿½RelativeLayoutï¿½ï¿½
 	 * @param ruleTime
-	 *            ¹æ¶¨±ØÐëÕ¹Ê¾Ê±¼ä ÊÊÓÃÓÚcpm&cpc ÔÚ¹æ¶¨Ê±¼äÄÚ²»¿É¹Ø±Õ£¬·ñÔò²»¼ÆÈëÊý¾Ý
+	 *            ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½Õ¹Ê¾Ê±ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cpm&cpc ï¿½Ú¹æ¶¨Ê±ï¿½ï¿½ï¿½Ú²ï¿½ï¿½É¹Ø±Õ£ï¿½ï¿½ï¿½ï¿½ò²»¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param delayTime
-	 *            ÔÚÑÓÊ±Ê±¼äÄÚ¿ÉÒÔ×ÔÓÉ´¦Àí£¬ÑÓÊ±Ê±¼äµ½´ïºó×Ô¶¯µ÷ÓÃ onAdSpreadPrepareClosed ½Ó¿Ú
+	 *            ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½äµ½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ onAdSpreadPrepareClosed ï¿½Ó¿ï¿½
 	 */
 	@Override
 	public void onAdSpreadNotifyCallback(String arg0, ViewGroup arg1, int arg2,

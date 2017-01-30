@@ -13,13 +13,17 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
 
+	//If you used only one  Banner,Video,Native,Video Placement,you can follow this kind of SDK_KEY initialization.
+	public static final String SDK_KEY = "SDK2016093109051932rem7dipq42aj3";
+
+	//Optional while used for more than one banner,native,video placements
 	/**
-	 * If you want more than one  banner placements
-	 * you have to create same project project and get the key use for different placement
+	 * If you want more than one  banner,native,video,native placements
+	 * while you have to create same project project in AdView and get the different SDK_KEY key ,you can follow this kind of KeySet initialization.
 	 */
 	public static final String key1 = "SDK2016093109051932rem7dipq42aj3";//SDK20151523030620lkfznoxeda4a7i3��SDK2016132801103979g4m0a2znmrt2a
-	public static final String key2 = "SDK2016093109051932rem7dipq42aj3";//SDK20161629040641z7snyxkrbndasty
-	public static final String key3 = "SDK2016093109051932rem7dipq42aj3";
+	public static final String key2 = "SDK2016093109051932rem7dipq42aj2";//SDK20161629040641z7snyxkrbndasty
+	public static final String key3 = "SDK2016093109051932rem7dipq42aja";
 	public static final String keySet[] = new String[] { key1, key2, key3 };
 
 	@Override
@@ -28,7 +32,7 @@ public class MainActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main_activity);
 
-		// ��ת������
+		//Banner Ad
 		findViewById(R.id.banner).setOnClickListener(
 				new View.OnClickListener() {
 
@@ -39,7 +43,8 @@ public class MainActivity extends Activity {
 						startActivity(intent);
 					}
 				});
-		// ��תȫ/�������
+
+		//Interstial Ad
 		findViewById(R.id.instl).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -50,7 +55,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// ��תԭ�����
+		// Native Ad
 		findViewById(R.id.natives).setOnClickListener(
 				new View.OnClickListener() {
 
@@ -61,7 +66,8 @@ public class MainActivity extends Activity {
 						startActivity(intent);
 					}
 				});
-		// ��תԭ�����
+
+		// Video Ad
 		findViewById(R.id.video).setOnClickListener(
 				new View.OnClickListener() {
 
@@ -73,7 +79,7 @@ public class MainActivity extends Activity {
 					}
 				});
 
-		// �汾����
+		// Update Information
 		findViewById(R.id.release).setOnClickListener(
 				new View.OnClickListener() {
 

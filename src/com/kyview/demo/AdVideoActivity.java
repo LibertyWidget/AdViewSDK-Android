@@ -23,22 +23,45 @@ public class AdVideoActivity extends Activity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_advideo);
+
 		requestAd = (Button) findViewById(R.id.requestad);
 		requestAd.setOnClickListener(this);
 		showAd = (Button) findViewById(R.id.showad);
 		showAd.setOnClickListener(this);
+
+		//Basic Initialization
+		InitConfiguration initConfiguration = new InitConfiguration.Builder(
+				this).setUpdateMode(InitConfiguration.UpdateMode.EVERYTIME)
+				.setBannerCloseble(InitConfiguration.BannerSwitcher.CANCLOSED)
+				.setInstlControlMode(InitConfiguration.InstlControlMode.USERCONTROL)
+				.setSupportHtml(InitConfiguration.Html5Switcher.SUPPORT)
+				.setRunMode(InitConfiguration.RunMode.TEST)
+				.build();
+
+		//Initialization For Video ads
+		AdViewVideoManager.getInstance(this).init(initConfiguration,
+				new String[]{MainActivity.SDK_KEY});
+
 	}
+
+	//Click Listener for handling Video Ad
 
 	@Override
 	public void onClick(View v) {
 
 		if (v.getId() == R.id.requestad) {
-			// 只请求广告，适用于预加载
-			AdViewVideoManager.getInstance(this).requestAd(this, MainActivity.key3, this);
+
+			// Only ads are requested for preloading
+			AdViewVideoManager.getInstance(this).requestAd(this, SDK_KEY, this);
 		} else if (v.getId() == R.id.showad) {
-			AdViewVideoManager.getInstance(this).playVideo(this, MainActivity.key3);
+
+			//Playing the video
+			AdViewVideoManager.getInstance(this).playVideo(this, SDK_KEY);
 		}
 	}
+
+
+	//CallBack Method for Video Ad
 
 	@Override
 	public void onAdFailed(String arg0) {
